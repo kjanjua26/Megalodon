@@ -14,15 +14,15 @@ Megalodon is an extensive library of all-that-is-to-sharks. It contains various 
   </tr>
   <tr>
     <td>Nurse Shark</td>
-    <td>Finegrained-Images/data/Nurse Shark/4.jpg</td>
+    <td><img src="Finegrained-Images/data/Nurse Shark/4.jpg"/></td>
   </tr>
   <tr>
     <td>White Shark</td>
-    <td>Finegrained-Images/data/White Shark/19.jpg</td>
+    <td><img src="Finegrained-Images/data/White Shark/19.jpg"/></td>
   </tr>
   <tr>
     <td>Tiger Shark</td>
-    <td>Finegrained-Images/data/Tiger Shark/21.jpg</td>
+    <td><img src="Finegrained-Images/data/Tiger Shark/21.jpg"/></td>
   </tr>
 </table>
 
