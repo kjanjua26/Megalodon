@@ -19,15 +19,15 @@ The frequency distribution of different species is shown in the graph.
   </tr>
   <tr>
     <td>Nurse Shark</td>
-    <td><img src="Finegrained-Images/data/Nurse Shark/4.jpg"/></td>
+    <td><img src="Finegrained-Images/data/Nurse Shark/4.jpg" width="100" height="100" /></td>
   </tr>
   <tr>
     <td>White Shark</td>
-    <td><img src="Finegrained-Images/data/White Shark/19.jpg"/></td>
+    <td><img src="Finegrained-Images/data/White Shark/19.jpg" width="100" height="100" /></td>
   </tr>
   <tr>
     <td>Tiger Shark</td>
-    <td><img src="Finegrained-Images/data/Tiger Shark/21.jpg"/></td>
+    <td><img src="Finegrained-Images/data/Tiger Shark/21.jpg" width="100" height="100"/></td>
   </tr>
 </table>
 
