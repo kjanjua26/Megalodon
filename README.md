@@ -11,6 +11,7 @@ The frequency distribution of different species is shown in the graph.
 <img src="imgs-readme/dist.png" width="600" height="400"/>
 
 # Finegrained Images
+Although spotting differences between various sharks is pretty easy given their distinct features: Hammerhead Shark vs White Shark. Similarly, it is relatively easy to spot differences between Nurse Shark and White or Tiger Shark. However it is not so easy to spot differences between White Shark and Tiger Shark. This is because of striking similarity between the two types (shown in sample images below). It would be interesting to explore the classification results on such a dataset. 
 
 <table style="width:100%">
   <tr>
