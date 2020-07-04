@@ -10,17 +10,28 @@ from bs4 import BeautifulSoup
 import requests, re, time
 import os
 from urllib.request import Request, urlopen
+from selenium import webdriver
+
 
 basepath_species = '/Users/Janjua/Desktop/Projects/Megalodon/List-of-Species/data/'
 basepath_images = '/Users/Janjua/Desktop/Projects/Megalodon/Finegrained-Images/data/'
 
 def page(url, header) -> BeautifulSoup:
+    """Returns page after reading it from the URL."""
+    driver = webdriver.Chrome()
     req = Request(url, headers=header)
     webpage = urlopen(req).read()
-    page = requests.get(url)
-    return BeautifulSoup(page.content, 'html.parser')
+    driver.get(url)
+    for i in range(1, 2):  # scrolling for n times
+        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")  # infinite scrolling issue.
+        time.sleep(4)
+    page = driver.page_source
+    driver.quit()
+    print("Done scrolling!")
+    return BeautifulSoup(page, 'html.parser')
 
 def download_images_with_query(name):
+    """Given an input query, downloads the images and saves them in a folder."""
     query = name.split()
     query = '+'.join(query)
     url = "https://www.google.co.in/search?q="+ query +"&source=lnms&tbm=isch"
@@ -30,25 +41,23 @@ def download_images_with_query(name):
     imgs = soup.find_all('img', attrs={'class': 'rg_i Q4LuWd'})
     print("Len: ", len(imgs))
     count = 0
+    local_count = 1
     for img in imgs:
         count += 1
-        if count > 21:
-            local_count = 1
+        if count > 21: # some weird Google error where first 21 images are empty always.
             img = str(img)
             imgUrl = img.split('src="')[-1].replace('"', '').replace('/>', '').split(' ')[0]
-            try:
-                if not os.path.exists(os.path.join(basepath_images, name)):
+            if not os.path.exists(os.path.join(basepath_images, name)):
                     os.makedirs(os.path.join(basepath_images, name))
-                with open(os.join(basepath_images, name) + "{}.jpg".format(local_count), 'wb') as f:
+            try:
+                with open(os.path.join(basepath_images, name) + "/{}.jpg".format(local_count), 'wb') as f:
                     response = requests.get(imgUrl)
                     f.write(response.content)
             except:
-                print("Failed")
-            print(imgUrl)
+                print("Failed: ", imgURL)
             local_count += 1
-            print()
 
 speices_list = open(os.path.join(basepath_species, 'species.txt'), 'r').readlines()
 for specie in speices_list:
+    print("For: {}".format(specie))
     download_images_with_query(specie.strip())
-    exit()
