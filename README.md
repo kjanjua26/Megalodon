@@ -57,6 +57,14 @@ The entire dataset is available in the ```Extensive-Data``` folder. It has a sin
   
   <tr>
     <td>Textual Description</td>
-    <td>String: the description of the shark specie.</td>
+    <td>String: the description of the shark specie</td>
   </tr>
 </table>
+
+# TODO-List
+
+<ul>
+  <li>The ```dataset.csv``` file</li>
+  <li>The bounding box ground-truth for detection tasks</li>
+  <li>Spectrograms of shark calls</li>
+</ul>
