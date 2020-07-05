@@ -4,6 +4,14 @@
 # Megalodon
 Megalodon is an extensive library of all-that-is-to-sharks. It contains various shark datasets, a model zoo and pre-trained networks for various tasks.
 
+# TODO-List
+
+<ul>
+  <li>The ```dataset.csv``` file</li>
+  <li>The bounding box ground-truth for detection tasks</li>
+  <li>Spectrograms of shark calls</li>
+</ul>
+
 # Shark Species Analysis
 The dataset is highly imbalanced due to some lesser known species of sharks. It is dependent on the images available on Google. For the sake of sample, some images are available in the repository. All the images are not published and will not be published. However, the numpy files and the code would be available for use-cases.
 The frequency distribution of different species is shown in the graph.
@@ -60,11 +68,3 @@ The entire dataset is available in the ```Extensive-Data``` folder. It has a sin
     <td>String: the description of the shark specie</td>
   </tr>
 </table>
-
-# TODO-List
-
-<ul>
-  <li>The ```dataset.csv``` file</li>
-  <li>The bounding box ground-truth for detection tasks</li>
-  <li>Spectrograms of shark calls</li>
-</ul>
