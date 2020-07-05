@@ -30,3 +30,33 @@ Although spotting differences between various sharks is pretty easy given their 
 </html>
 
 # Shark Calls
+
+# Data
+The entire dataset is available in the ```Extensive-Data``` folder. It has a single .csv file ```dataset.csv```. The .csv file is described below.
+
+<table style="width:100%">
+  <tr>
+    <th>Column Name</th>
+    <th>Row Data</th>
+  </tr>
+  
+  <tr>
+    <td>Shark Specie</td>
+    <td>String: the name of shark</td>
+  </tr>
+
+  <tr>
+    <td>Image</td>
+    <td>URL: the link to the image</td>
+  </tr>
+
+  <tr>
+    <td>Shark Call</td>
+    <td>URL: the link to the shark call</td>
+  </tr>
+  
+  <tr>
+    <td>Textual Description</td>
+    <td>String: the description of the shark specie.</td>
+  </tr>
+</table>
