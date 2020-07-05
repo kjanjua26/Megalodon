@@ -7,7 +7,7 @@ Megalodon is an extensive library of all-that-is-to-sharks. It contains various 
 # TODO-List
 
 <ul>
-  <li>The ```dataset.csv``` file</li>
+  <li>The dataset.csv file</li>
   <li>The bounding box ground-truth for detection tasks</li>
   <li>Spectrograms of shark calls</li>
 </ul>
